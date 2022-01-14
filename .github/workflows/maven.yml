@@ -5,9 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main ]
+    branches: [ fix_flaky ]
   pull_request:
-    branches: [ main ]
+    branches: [ fix_flaky ]
 
 jobs:
   build:
