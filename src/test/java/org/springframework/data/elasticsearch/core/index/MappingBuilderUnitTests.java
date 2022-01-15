@@ -33,7 +33,7 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Date;
-import java.util.LinkedHashMap;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -1114,7 +1114,7 @@ public class MappingBuilderUnitTests extends MappingContextBaseTests {
 		@Nullable
 		@Field(type = FieldType.Object) private Author author;
 		@Nullable
-		@Field(type = FieldType.Nested) private Map<Integer, Collection<String>> buckets = new LinkedHashMap<>();
+		@Field(type = FieldType.Nested) private Map<Integer, Collection<String>> buckets = new HashMap<>();
 		@Nullable
 		@MultiField(mainField = @Field(type = FieldType.Text, analyzer = "whitespace"),
 				otherFields = { @InnerField(suffix = "prefix", type = FieldType.Text, analyzer = "stop",
