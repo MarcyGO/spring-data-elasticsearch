@@ -18,8 +18,6 @@ package org.springframework.data.elasticsearch.core.index;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.skyscreamer.jsonassert.JSONAssert.*;
-import static org.junit.Assert.fail;
-import org.json.JSONException;
 import static org.springframework.data.elasticsearch.annotations.FieldType.*;
 import static org.springframework.data.elasticsearch.annotations.FieldType.Object;
 
@@ -987,11 +985,7 @@ public class MappingBuilderUnitTests extends MappingContextBaseTests {
 
 		String mapping = getMappingBuilder().buildPropertyMapping(ExcludedFieldEntity.class);
 
-		try {
-			assertEquals(expected, mapping, false);
-		} catch (JSONException jse) {
-			fail("Not comparing JSON strings.");
-		}
+		assertEquals(expected, mapping, false);
 		
 	}
 
