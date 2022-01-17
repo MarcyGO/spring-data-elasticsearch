@@ -986,7 +986,6 @@ public class MappingBuilderUnitTests extends MappingContextBaseTests {
 		String mapping = getMappingBuilder().buildPropertyMapping(ExcludedFieldEntity.class);
 
 		assertEquals(expected, mapping, false);
-		
 	}
 
 	// region entities
